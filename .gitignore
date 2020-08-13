@@ -2,4 +2,3 @@ node_modules/**/*
 .expo/*
 .expo-shared/*
 npm-debug.*
-src/config/Constants.js
