@@ -1,0 +1,45 @@
+ import React from 'react';
+ import { View, StatusBar, YellowBox} from 'react-native';
+ import { Provider } from 'react-redux';
+ import { createStore, applyMiddleware  /*, compose*/  } from 'redux';
+ import ReduxThunk from 'redux-thunk';
+
+ // Debug
+ // https://github.com/zalmoxisus/redux-devtools-extension#11-basic-store
+ // https://medium.com/@tetsuyahasegawa/how-to-integrate-react-native-debugger-to-your-expo-react-native-project-db1d631fad02
+ // https://github.com/jhen0409/react-native-debugger
+ import { composeWithDevTools } from 'redux-devtools-extension';
+
+ import Rotas from './Rotas';
+ import reducers from './src/reducers';
+
+ YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated']);
+ YellowBox.ignoreWarnings(['Remote debugger']);
+
+ export default class App extends React.Component {
+
+     async componentWillMount() {
+         await Expo.Font.loadAsync({
+             'Roboto': require('native-base/Fonts/Roboto.ttf'),
+             'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf'),
+         });
+     }
+
+     render() {
+     // Debug
+     // YellowBox.ignoreWarnings(['Remote debugger']);
+     const composeEnhancers = composeWithDevTools({ /*// Specify name here, actionsBlacklist, actionsCreators and other options if needed*/});
+     const enhancer = composeEnhancers(applyMiddleware(ReduxThunk), /* other store enhancers if any*/ );
+
+     // Fim DeBUG
+     return (
+         <View style={{flex:1}}>
+             <StatusBar barStyle="light-content" />
+             {/*<Provider store={createStore(reducers, {}, applyMiddleware(ReduxThunk))}>*/}
+             <Provider store={createStore(reducers, {}, enhancer)}>
+               <Rotas />
+             </Provider>
+         </View>
+     );
+     }
+ }

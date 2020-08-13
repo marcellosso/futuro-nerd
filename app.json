@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "Futuro Nerd - Reforço Escolar",
+    "description": "Reforço Escolar.",
+    "slug": "futuro-nerd",
+    "privacy": "public",
+    "sdkVersion": "34.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "yes",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.futuronerd.futuronerd",
+      "permissions": [
+        "READ_PHONE_STATE"
+      ],
+      "versionCode": 1
+    },
+    "scheme": "exp003469eb40fa4c929b83d2b4940a1dd8"
+  }
+}

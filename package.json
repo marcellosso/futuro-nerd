@@ -1,0 +1,35 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-plugin-transform-react-jsx-source": "^6.22.0",
+    "expo": "^34.0.3",
+    "expo-linear-gradient": "~6.0.0",
+    "firebase": "^6.2.0",
+    "native-base": "^2.13.12",
+    "qs": "^6.9.0",
+    "react": "16.8.3",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
+    "react-native-animatable": "^1.2.4",
+    "react-native-appstate-listener": "^1.0.0",
+    "react-native-collapsible": "^0.11.2",
+    "react-native-counter": "^0.2.0",
+    "react-native-elements": "^1.2.0",
+    "react-native-image-header-scroll-view": "^0.8.2",
+    "react-native-masked-text": "^1.6.5",
+    "react-native-router-flux": "^4.0.0-beta.28",
+    "react-native-simple-radio-button": "^2.7.1",
+    "react-native-timer-countdown": "^2.0.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-preset-react-native": "^4.0.1",
+    "jest-expo": "^34.0.0",
+    "redux-devtools-extension": "^2.13.8",
+    "schedule": "^0.4.0",
+    "scheduler": "^0.13.6"
+  }
+}
